@@ -33,10 +33,13 @@ class skiplist {
     // 返回表中原来是否有该key
     bool put(const key_type &key, const value_type &val);
     //获取元素
-    value_type get(const key_type &key);
+    value_type*get(const key_type &key);
+    //打印一下无节点(debug)
+    void readGetResult(value_type*val);
     // 返回删除情况
-    value_type remove(const key_type &key);
-
+    bool remove(const key_type &key);
+    //帮忙翻译一下remove结果(debug)
+    void readRemoveresult(bool flag);
 };
 
 
